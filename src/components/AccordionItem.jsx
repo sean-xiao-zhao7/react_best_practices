@@ -1,8 +1,18 @@
-export default function AccordionItem({ title, children }) {
+import { useAccordionContext } from "./Accordion";
+
+export default function AccordionItem({
+    parentId,
+    className,
+    title,
+    children,
+}) {
+    const accordionContext = useAccordionContext();
+    const isOpen = parentId === accordionContext.openItemId;
+
     return (
         <li>
             <h3>{title}</h3>
-            <div>{children}</div>
+            <div className={isOpen ? "open" : undefined}>{children}</div>
         </li>
     );
 }

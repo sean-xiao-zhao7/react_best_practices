@@ -1,6 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const AccordionContext = createContext();
+
+export function useAccordionContext() {
+    const context = useContext(AccordionContext);
+
+    if (!context) {
+        throw new Error("No accordion context initialized.");
+    }
+
+    return context;
+}
 
 export default function Accordion({ children, className }) {
     const [openItemId, setOpenItemId] = useState(null);
