@@ -5,13 +5,25 @@ export default function AccordionItem({ id, className, title, children }) {
     const isOpen = id === accordionContext.openItemId;
 
     const clickHandler = () => {
-        accordionContext.openItem(id);
+        if (!isOpen) {
+            accordionContext.openItem(id);
+        } else {
+            accordionContext.closeItems();
+        }
     };
 
     return (
         <li className={className} onClick={clickHandler}>
-            <h3>{title}</h3>
-            <div className={isOpen ? "open" : undefined}>{children}</div>
+            <h3 className="accordion-item-title">{title}</h3>
+            <div
+                className={
+                    isOpen
+                        ? "open accordion-item-content"
+                        : "accordion-item-content"
+                }
+            >
+                {children}
+            </div>
         </li>
     );
 }
