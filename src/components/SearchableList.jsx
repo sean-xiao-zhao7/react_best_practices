@@ -4,7 +4,7 @@ export default function SearchableList({ listItems }) {
             <input type="search" placeholder="Enter filter words" />
             <ul>
                 {listItems.map((item) => {
-                    return <li key={item}>{item}</li>;
+                    return <li key={item.id}>{item.title}</li>;
                 })}
             </ul>
         </div>
