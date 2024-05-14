@@ -3,7 +3,9 @@ import { useState } from "react";
 export default function SearchableList({ listItems }) {
     const [term, setTerm] = useState("");
 
-    const filteredItems = listItems.filter((item) => item.title.includes(term));
+    const filteredItems = listItems.filter((item) =>
+        item.title.toLowerCase().includes(term.toLowerCase())
+    );
 
     const handleTermUpdate = (e) => {
         setTerm(e.target.value);
