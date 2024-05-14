@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function SearchableList({ listItems, children }) {
+export default function SearchableList({ listItems, keyGen, children }) {
     const [term, setTerm] = useState("");
 
     const filteredItems = listItems.filter((item) =>
@@ -20,7 +20,7 @@ export default function SearchableList({ listItems, children }) {
             />
             <ul>
                 {filteredItems.map((item) => {
-                    return <li key={item.id}>{children(item)}</li>;
+                    return <li key={keyGen(item)}>{children(item)}</li>;
                 })}
             </ul>
         </div>

@@ -4,6 +4,11 @@ import SearchableList from "./components/SearchableList";
 import { LOCATIONS } from "./constants/locations";
 
 export default function App() {
+    const keyGen = (item) => {
+        if (item.id) return item.id;
+        return item;
+    };
+
     return (
         <main>
             <section>
@@ -42,7 +47,7 @@ export default function App() {
                 </Accordion>
             </section>
             <section>
-                <SearchableList listItems={LOCATIONS}>
+                <SearchableList listItems={LOCATIONS} keyGen={keyGen}>
                     {(item) => <Location location={item} />}
                 </SearchableList>
             </section>
