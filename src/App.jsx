@@ -1,35 +1,9 @@
 import Accordion from "./components/Accordion";
+import Location from "./components/Location";
 import SearchableList from "./components/SearchableList";
+import { LOCATIONS } from "./constants/locations";
 
 export default function App() {
-    const PLACES = [
-        {
-            id: "african-savanna",
-            title: "African Savanna",
-            description: "Experience the beauty of nature.",
-        },
-        {
-            id: "amazon-river",
-            title: "Amazon River",
-            description: "Get to know the largest river in the world.",
-        },
-        {
-            id: "caribbean-beach",
-            title: "Caribbean Beach",
-            description: "Enjoy the sun and the beach.",
-        },
-        {
-            id: "desert-dunes",
-            title: "Desert Dunes",
-            description: "Discover the desert life.",
-        },
-        {
-            id: "forest-waterfall",
-            title: "Forest Waterfall",
-            description: "Listen to the sound of the water.",
-        },
-    ];
-
     return (
         <main>
             <section>
@@ -68,7 +42,9 @@ export default function App() {
                 </Accordion>
             </section>
             <section>
-                <SearchableList listItems={PLACES} />
+                <SearchableList listItems={LOCATIONS}>
+                    {(item) => <Location location={item} />}
+                </SearchableList>
             </section>
         </main>
     );
