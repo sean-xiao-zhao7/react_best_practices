@@ -1,11 +1,19 @@
+import React from "react";
+
 import Accordion from "./components/Accordion";
 import Location from "./components/Location";
 import SearchableList from "./components/SearchableList";
 import { LOCATIONS } from "./constants/locations";
 
+type itemType = {
+    id: string;
+    title: string;
+    description: string;
+};
+
 export default function App() {
-    const keyGen = (item) => {
-        if (item.id) return item.id;
+    const keyGen = (item: string | itemType) => {
+        if (typeof item !== "string") return item.id;
         return item;
     };
 
