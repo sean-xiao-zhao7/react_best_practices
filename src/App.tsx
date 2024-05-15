@@ -3,13 +3,9 @@ import React from "react";
 import Accordion from "./components/Accordion";
 import Location from "./components/Location";
 import SearchableList from "./components/SearchableList";
-import { LOCATIONS } from "./constants/locations";
 
-type itemType = {
-    id: string;
-    title: string;
-    description: string;
-};
+import { LOCATIONS } from "./data/locations";
+import { itemType } from "./types/locationItem";
 
 export default function App() {
     const keyGen = (item: string | itemType) => {
