@@ -20,7 +20,7 @@ export function useAccordionContext() {
     return context;
 }
 
-export default function Accordion({ children, className }) {
+const Accordion = ({ children, className }) => {
     const [openItemId, setOpenItemId] = useState("");
 
     const openItem = (itemId: string) => {
@@ -42,6 +42,8 @@ export default function Accordion({ children, className }) {
             <ul className={className}>{children}</ul>
         </AccordionContext.Provider>
     );
-}
+};
 
 Accordion.Item = AccordionItem;
+
+export default Accordion;

@@ -52,7 +52,7 @@ export default function App() {
             </section>
             <section>
                 <SearchableList listItems={LOCATIONS} keyGen={keyGen}>
-                    {(item) => <Location location={item} />}
+                    {(item: LocationItemType) => <Location location={item} />}
                 </SearchableList>
             </section>
         </main>
