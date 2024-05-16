@@ -5,10 +5,10 @@ import Location from "./components/Location";
 import SearchableList from "./components/SearchableList";
 
 import { LOCATIONS } from "./data/locations";
-import { itemType } from "./types/locationItem";
+import { LocationItemType } from "./types/locationItemType";
 
 export default function App() {
-    const keyGen = (item: string | itemType) => {
+    const keyGen = (item: string | LocationItemType) => {
         if (typeof item !== "string") return item.id;
         return item;
     };

@@ -1,4 +1,4 @@
-export type itemType = {
+export type LocationItemType = {
     id: string;
     title: string;
     description: string;
