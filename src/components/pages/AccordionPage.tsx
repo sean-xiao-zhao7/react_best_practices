@@ -1,6 +1,6 @@
 import React from "react";
 
-import Accordion from "../Accordion";
+import Accordion from "../accordion/Accordion";
 
 export default function AccordionPage() {
     return (

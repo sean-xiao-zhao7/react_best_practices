@@ -1,7 +1,7 @@
 import React from "react";
 
-import Location from "../Location";
-import SearchableList from "../SearchableList";
+import Location from "../searchablelist/Location";
+import SearchableList from "../searchablelist/SearchableList";
 
 import { LOCATIONS } from "../../data/locations";
 

@@ -2,7 +2,7 @@ import React from "react";
 import { createContext, useContext, useState } from "react";
 
 import AccordionItem from "./AccordionItem";
-import { AccordionContextType } from "../types/accordionContextType";
+import { AccordionContextType } from "../../types/accordionContextType";
 
 const AccordionContext = createContext<AccordionContextType>({
     openItemId: "",
