@@ -2,14 +2,16 @@ import React, { useState } from "react";
 
 import CalculatorInput from "../investment-calculator/calculator_input";
 import { InvestmentInputType } from "../../types/investmentInputType";
+import { calculateInvestmentResults } from "../../utils/investment";
 
 export default function InvestmentCalculatorPage() {
     const [inputs, setInputs] = useState<InvestmentInputType>({
-        initial_investment: 0,
-        annual_investment: 0,
-        expected_returns: 0,
+        initialInvestment: 0,
+        annualInvestment: 0,
+        expectedReturn: 0,
         duration: 0,
     });
+    const result = calculateInvestmentResults(inputs);
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputs((prevInputs) => {
