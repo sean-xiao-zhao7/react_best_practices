@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 
 export default function CalculatorInput({
     id,
@@ -7,7 +7,7 @@ export default function CalculatorInput({
 }: {
     id: string;
     label: string;
-    onChange: (event: ChangeEvent) => void;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
     return (
         <div className="calculator-input">

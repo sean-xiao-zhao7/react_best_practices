@@ -11,6 +11,15 @@ export default function InvestmentCalculatorPage() {
         duration: 0,
     });
 
+    const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setInputs((prevInputs) => {
+            return {
+                ...prevInputs,
+                [event.target.name]: event.target.value,
+            };
+        });
+    };
+
     return (
         <>
             <h2>Investment Calculator</h2>
@@ -18,46 +27,22 @@ export default function InvestmentCalculatorPage() {
                 <CalculatorInput
                     id="initial-investment"
                     label="Initial Investment"
-                    onChange={(event) => {
-                        setInputs((prevInputs) => {
-                            return {
-                                ...prevInputs,
-                            };
-                        });
-                    }}
+                    onChange={onChange}
                 />
                 <CalculatorInput
                     id="annual-investment"
                     label="Annual Investment"
-                    onChange={(event) => {
-                        setInputs((prevInputs) => {
-                            return {
-                                ...prevInputs,
-                            };
-                        });
-                    }}
+                    onChange={onChange}
                 />
                 <CalculatorInput
                     id="expected-returns"
                     label="Expected Returns"
-                    onChange={(event) => {
-                        setInputs((prevInputs) => {
-                            return {
-                                ...prevInputs,
-                            };
-                        });
-                    }}
+                    onChange={onChange}
                 />
                 <CalculatorInput
                     id="duration"
                     label="Duration"
-                    onChange={(event) => {
-                        setInputs((prevInputs) => {
-                            return {
-                                ...prevInputs,
-                            };
-                        });
-                    }}
+                    onChange={onChange}
                 />
             </div>
             <div></div>
