@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+
 import CalculatorInput from "../investment-calculator/calculator_input";
+import { InvestmentInputType } from "../../types/investmentInputType";
 
 export default function InvestmentCalculatorPage() {
+    const [inputs, setInputs] = useState<InvestmentInputType>({
+        initial_investment: 0,
+        annual_investment: 0,
+        expected_returns: 0,
+        duration: 0,
+    });
+
     return (
         <>
             <h2>Investment Calculator</h2>
