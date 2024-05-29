@@ -18,16 +18,47 @@ export default function InvestmentCalculatorPage() {
                 <CalculatorInput
                     id="initial-investment"
                     label="Initial Investment"
+                    onChange={(event) => {
+                        setInputs((prevInputs) => {
+                            return {
+                                ...prevInputs,
+                            };
+                        });
+                    }}
                 />
                 <CalculatorInput
                     id="annual-investment"
                     label="Annual Investment"
+                    onChange={(event) => {
+                        setInputs((prevInputs) => {
+                            return {
+                                ...prevInputs,
+                            };
+                        });
+                    }}
                 />
                 <CalculatorInput
                     id="expected-returns"
                     label="Expected Returns"
+                    onChange={(event) => {
+                        setInputs((prevInputs) => {
+                            return {
+                                ...prevInputs,
+                            };
+                        });
+                    }}
                 />
-                <CalculatorInput id="duration" label="Duration" />
+                <CalculatorInput
+                    id="duration"
+                    label="Duration"
+                    onChange={(event) => {
+                        setInputs((prevInputs) => {
+                            return {
+                                ...prevInputs,
+                            };
+                        });
+                    }}
+                />
             </div>
             <div></div>
         </>
