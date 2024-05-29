@@ -61,5 +61,22 @@
 
 #investment-calculator-inputs {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 50%);
+    justify-items: center;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+
+    .calculator-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        input {
+            padding: 0.5rem;
+        }
+
+        label {
+            padding-bottom: 0.5rem;
+        }
+    }
 }

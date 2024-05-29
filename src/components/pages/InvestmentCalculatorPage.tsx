@@ -7,8 +7,8 @@ export default function InvestmentCalculatorPage() {
             <h2>Investment Calculator</h2>
             <div id="investment-calculator-inputs">
                 <CalculatorInput
-                    id="inital-investment"
-                    label="Inital Investment"
+                    id="initial-investment"
+                    label="Initial Investment"
                 />
                 <CalculatorInput
                     id="annual-investment"

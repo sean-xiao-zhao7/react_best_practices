@@ -8,7 +8,7 @@ export default function CalculatorInput({
     label: string;
 }) {
     return (
-        <div>
+        <div className="calculator-input">
             <label htmlFor={id}>{label}</label>
             <input type="number" name={id} id={id} />
         </div>
