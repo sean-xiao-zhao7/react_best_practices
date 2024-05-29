@@ -8,6 +8,7 @@ export default function MainLayout() {
                 <Link to="/">Home</Link>
                 <Link to="/accordion">Accordion Test</Link>
                 <Link to="/searchablelist">Searchable List Test</Link>
+                <Link to="/investment-calculator">Investment Calculator</Link>
             </menu>
             <section>
                 <Outlet />
