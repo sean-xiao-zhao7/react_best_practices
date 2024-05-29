@@ -56,3 +56,10 @@
 .center {
     text-align: center;
 }
+
+/* calculator inputs */
+
+#investment-calculator-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+}
