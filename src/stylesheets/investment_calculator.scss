@@ -80,3 +80,14 @@
         }
     }
 }
+
+#investment-calculator-results-headings,
+.investment-calculator-results-row {
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(5, calc(100% /5));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    justify-items: center;
+}
