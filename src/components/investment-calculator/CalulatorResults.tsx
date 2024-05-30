@@ -1,6 +1,8 @@
 import React from "react";
 import { InvestmentResultType } from "../../types/investmentResultType";
 
+import { formatter } from "../../utils/investment";
+
 export default function CalculatorResults({
     results,
 }: {
@@ -21,9 +23,9 @@ export default function CalculatorResults({
                         className="investment-calculator-results-row"
                     >
                         <div>{result.year}</div>
-                        <div>{result.annualInvestment}</div>
-                        <div>{result.interest}</div>
-                        <div>{result.valueEndOfYear}</div>
+                        <div>{formatter.format(result.annualInvestment)}</div>
+                        <div>{formatter.format(result.interest)}</div>
+                        <div>{formatter.format(result.valueEndOfYear)}</div>
                     </div>
                 );
             })}
