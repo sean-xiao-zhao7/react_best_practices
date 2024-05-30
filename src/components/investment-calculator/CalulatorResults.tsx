@@ -8,6 +8,10 @@ export default function CalculatorResults({
 }: {
     results: InvestmentResultType[];
 }) {
+    if (results.length == 0) {
+        return <></>;
+    }
+
     return (
         <>
             <div id="investment-calculator-results-headings">
