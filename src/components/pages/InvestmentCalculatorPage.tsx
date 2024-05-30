@@ -17,7 +17,7 @@ export default function InvestmentCalculatorPage() {
         setInputs((prevInputs) => {
             return {
                 ...prevInputs,
-                [event.target.name]: event.target.value,
+                [event.target.name]: +event.target.value,
             };
         });
     };
@@ -39,8 +39,8 @@ export default function InvestmentCalculatorPage() {
                     onChange={onChange}
                 />
                 <CalculatorInput
-                    id="expectedReturns"
-                    label="Expected Returns"
+                    id="expectedReturn"
+                    label="Expected Return"
                     onChange={onChange}
                 />
                 <CalculatorInput
