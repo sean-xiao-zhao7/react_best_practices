@@ -9,11 +9,10 @@ export default function CalculatorResults({
     return (
         <>
             <div id="investment-calculator-results-headings">
-                <div></div>
+                <div>Year</div>
                 <div>Annual Investment</div>
                 <div>Interest</div>
                 <div>Value at End of Year</div>
-                <div>Year</div>
             </div>
             {results.map((result) => {
                 return (
@@ -21,11 +20,10 @@ export default function CalculatorResults({
                         key={result.id}
                         className="investment-calculator-results-row"
                     >
-                        Entry:
+                        <div>{result.year}</div>
                         <div>{result.annualInvestment}</div>
                         <div>{result.interest}</div>
                         <div>{result.valueEndOfYear}</div>
-                        <div>{result.year}</div>
                     </div>
                 );
             })}
