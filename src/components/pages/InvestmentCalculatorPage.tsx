@@ -29,17 +29,17 @@ export default function InvestmentCalculatorPage() {
             <h2>Investment Calculator</h2>
             <div id="investment-calculator-inputs">
                 <CalculatorInput
-                    id="initial-investment"
+                    id="initialInvestment"
                     label="Initial Investment"
                     onChange={onChange}
                 />
                 <CalculatorInput
-                    id="annual-investment"
+                    id="annualInvestment"
                     label="Annual Investment"
                     onChange={onChange}
                 />
                 <CalculatorInput
-                    id="expected-returns"
+                    id="expectedReturns"
                     label="Expected Returns"
                     onChange={onChange}
                 />
