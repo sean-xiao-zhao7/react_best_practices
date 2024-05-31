@@ -1,4 +1,5 @@
 import React from "react";
+import { CalculatorInputDiv } from "../../stylesheets/investment_calculator";
 
 export default function CalculatorInput({
     id,
@@ -10,7 +11,7 @@ export default function CalculatorInput({
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
     return (
-        <div className="calculator-input">
+        <CalculatorInputDiv>
             <label htmlFor={id}>{label}</label>
             <input
                 type="number"
@@ -18,6 +19,6 @@ export default function CalculatorInput({
                 id={id}
                 onChange={(event) => onChange(event)}
             />
-        </div>
+        </CalculatorInputDiv>
     );
 }
