@@ -1,5 +1,9 @@
 @import url("./stylesheets/investment_calculator.scss");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     box-sizing: border-box;
 }
