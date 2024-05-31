@@ -13,3 +13,16 @@ export const CalculatorInputDiv = styled.div`
         padding-bottom: 0.5rem;
     }
 `;
+
+export const CalculatorResultsDiv = styled.div`
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, calc(100% / 4));
+    grid-row-gap: 1rem;
+    justify-items: center;
+
+    div {
+        overflow: scroll;
+    }
+`;
