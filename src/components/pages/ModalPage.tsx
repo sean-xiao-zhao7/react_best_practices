@@ -2,16 +2,17 @@ import React, { useRef } from "react";
 
 import Modal from "../modal/Modal";
 import { MainButton } from "../../stylesheets/button";
+import { ModalHandleType } from "../../types/modalHandleType";
 
 export default function ModalPage() {
-    const modalRef = useRef<HTMLDialogElement>(null);
+    const modalRef = useRef<ModalHandleType>(null);
 
     const clickHandler = () => {
         if (modalRef.current) {
-            if (modalRef.current.open) {
-                modalRef.current.close();
+            if (modalRef.current.isOpen()) {
+                modalRef.current.open();
             } else {
-                modalRef.current.showModal();
+                modalRef.current.close();
             }
         }
     };
