@@ -7,6 +7,7 @@ import IndexPage from "../components/pages/IndexPage";
 import AccordionPage from "../components/pages/AccordionPage";
 import SearchableListPage from "../components/pages/SearchableListPage";
 import InvestmentCalculatorPage from "../components/pages/InvestmentCalculatorPage";
+import ModalPage from "../components/pages/ModalPage";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: "/investment-calculator",
                 element: <InvestmentCalculatorPage />,
+            },
+            {
+                path: "/modal",
+                element: <ModalPage />,
             },
         ],
     },

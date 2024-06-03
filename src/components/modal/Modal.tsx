@@ -1,12 +1,17 @@
-import React from "react";
+import React, { ForwardedRef, forwardRef } from "react";
 
-export default function Modal() {
+const Modal = forwardRef(function (
+    { title }: { title: string },
+    ref: ForwardedRef<HTMLDialogElement>
+) {
     return (
         <>
-            <dialog>
-                <h2>Modal title</h2>
+            <dialog ref={ref}>
+                <h2>Modal {title}</h2>
                 <p>Modal body.</p>
             </dialog>
         </>
     );
-}
+});
+
+export default Modal;

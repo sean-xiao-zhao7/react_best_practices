@@ -9,6 +9,7 @@ export default function MainLayout() {
                 <Link to="/accordion">Accordion Test</Link>
                 <Link to="/searchablelist">Searchable List Test</Link>
                 <Link to="/investment-calculator">Investment Calculator</Link>
+                <Link to="/modal">Modal</Link>
             </menu>
             <section>
                 <Outlet />
