@@ -1,12 +1,12 @@
 import React, { ForwardedRef, forwardRef } from "react";
 
 const Modal = forwardRef(function (
-    { title }: { title: string },
+    { title, onClick }: { title: string; onClick: () => void },
     ref: ForwardedRef<HTMLDialogElement>
 ) {
     return (
         <>
-            <dialog ref={ref}>
+            <dialog ref={ref} onClick={onClick}>
                 <h2>Modal {title}</h2>
                 <p>Modal body.</p>
             </dialog>
