@@ -9,7 +9,7 @@ export default function ModalPage() {
 
     const clickHandler = () => {
         if (modalRef.current) {
-            if (modalRef.current.isOpen()) {
+            if (!modalRef.current.isOpen()) {
                 modalRef.current.open();
             } else {
                 modalRef.current.close();
